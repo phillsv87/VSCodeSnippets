@@ -1,0 +1,10 @@
+{
+  "CancellationToken": {
+    "scope": "csharp",
+    "prefix": "cs-cancel",
+    "description": "CancellationToken method parameter",
+    "body": [
+      "CancellationToken cancel"
+    ]
+  }
+}

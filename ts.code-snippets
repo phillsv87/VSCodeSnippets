@@ -1,0 +1,16 @@
+{
+  "TypeScript Emitter Property": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "ts-prop",
+    "description": "TypeScript emitter property",
+    "body": [
+      "private _${1:name}:${2:type}=${3:defaultValue};",
+      "public get ${1:name}(){return this._${1:name}}",
+      "public set ${1:name}(value:${2:type}){",
+      "    if(this._${1:name}===value){return}",
+      "    this._${1:name}=value;",
+      "    this.emit('${1:name}');",
+      "}"
+    ]
+  }
+}

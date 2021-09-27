@@ -1,0 +1,80 @@
+{
+
+  "React JS Component": {
+    "prefix": "re-comp",
+    "scope": "typescriptreact",
+    "description": "React JS functional component",
+    "body": [
+      "import React from 'react';",
+      "",
+      "interface ${0:name}Props",
+      "{",
+      "    ",
+      "}",
+      "",
+      "export default function ${0:name}({",
+      "",
+      "}:${0:name}Props){",
+      "",
+      "    return (",
+      "        <div>",
+      "            Component \"HI\"",
+      "        </div>",
+      "    )",
+      "",
+      "}"
+    ]
+  },
+
+  "React Native Component": {
+    "scope": "typescriptreact",
+    "prefix": "rn-comp",
+    "description": "React Native functional component",
+    "body": [
+      "import React from 'react';",
+      "import { View, StyleSheet } from 'react-native';",
+      "",
+      "interface ${0:name}Props",
+      "{",
+      "    ",
+      "}",
+      "",
+      "export default function ${0:name}({",
+      "",
+      "}:${0:name}Props){",
+      "",
+      "    return (",
+      "        <View style={styles.root}>",
+      "",
+      "        </View>",
+      "    )",
+      "",
+      "}",
+      "",
+      "const styles=StyleSheet.create({",
+      "    root:{",
+      "        ",
+      "    }",
+      "});"
+    ]
+  },
+  
+  "React Async Effect": {
+    "scope": "typescriptreact",
+    "prefix": "re-asyncfx",
+    "description": "Async useEffect",
+    "body": [
+      "useEffect(()=>{",
+      "    let m=true;",
+      "    (async ()=>{",
+      "        try{",
+      "            ",
+      "        }catch(ex){",
+      "            Log.error('${1:errorMessage}',ex);",
+      "        }",
+      "    })()",
+      "    return ()=>{m=false};",
+      "},[]);"
+    ]
+  }
+}
