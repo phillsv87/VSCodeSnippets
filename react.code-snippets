@@ -60,7 +60,7 @@
   },
   
   "React Async Effect": {
-    "scope": "typescriptreact",
+    "scope": "typescriptreact,typescript",
     "prefix": "re-asyncfx",
     "description": "Async useEffect",
     "body": [

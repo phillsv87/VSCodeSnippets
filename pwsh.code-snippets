@@ -5,7 +5,7 @@
     "description": "Standard powershell header",
     "body": [
       "#!/usr/local/bin/pwsh",
-      "$ErrorActionPreference=\"Stop\""
+      "$$ErrorActionPreference=\"Stop\""
     ]
   }
 }
