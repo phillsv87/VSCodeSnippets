@@ -1,0 +1,12 @@
+{
+  "Bash Shebang": {
+    "scope": "shellscript",
+    "prefix": "shebang",
+    "description": "Bash shebang and change directory to script directory",
+    "body": [
+      "#!/bin/bash",
+      "cd \"\\$(dirname \"\\$0\")\"",
+      ""
+    ]
+  }
+}
