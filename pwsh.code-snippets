@@ -4,7 +4,7 @@
     "prefix": "ps-header",
     "description": "Standard powershell header",
     "body": [
-      "#!/usr/local/bin/pwsh",
+      "#!/usr/bin/env pwsh",
       "$$ErrorActionPreference=\"Stop\""
     ]
   }
