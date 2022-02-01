@@ -37,6 +37,17 @@
   },
 
 
+  "TS Named Value prop": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "ts-value-prop",
+    "description": "TypeScript named value event",
+    "body": [
+      "private readonly _${1:name}=createValueBackedEvent<${2:valueType}>(${3:initValue});",
+      "public get ${1:name}(){return this._${1:name}.evt}"
+    ]
+  },
+
+
   "TS Named Custom Event": {
     "scope": "typescript,typescriptreact",
     "prefix": "ts-custom-event",
