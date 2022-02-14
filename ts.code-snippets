@@ -48,6 +48,16 @@
   },
 
 
+  "TS Public Named Value prop": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "ts-public-value-prop",
+    "description": "TypeScript public named value event",
+    "body": [
+      "public readonly ${1:name}=createValueBackedEvent<${2:valueType}>(${3:initValue});"
+    ]
+  },
+
+
   "TS Named Custom Event": {
     "scope": "typescript,typescriptreact",
     "prefix": "ts-custom-event",
