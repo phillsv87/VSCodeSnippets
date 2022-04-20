@@ -76,5 +76,23 @@
       "    return ()=>{m=false};",
       "},[]);"
     ]
+  },
+
+
+  "Styled Tag": {
+    "scope": "typescriptreact",
+    "prefix": "styled-tag",
+    "description": "Styled tag",
+    "body": [
+      "<style jsx>{`",
+      "    .${1:root}{",
+      "        display:flex;",
+      "        flex-direction:column;",
+      "        flex:1;",
+      "    }",
+      "`}</style>"
+    ]
   }
+
+
 }
