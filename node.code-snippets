@@ -1,0 +1,35 @@
+{
+  "Node Shebang": {
+    "scope": "typescript,javascript",
+    "prefix": "node-shebang",
+    "description": "Standard node shebang",
+    "body": [
+      "#!/usr/bin/env node"
+    ]
+  },
+
+
+  "Async node script": {
+    "scope": "typescript,javascript",
+    "prefix": "node-main-async",
+    "description": "An async main node script",
+    "body": [
+      "#!/usr/bin/env node",
+      "",
+      "async function main()",
+      "{",
+      "    // Stuff here",
+      "}",
+      "",
+      "(async ()=>{",
+      "    try{",
+      "        await main()",
+      "    }catch(ex){",
+      "        console.error(ex);",
+      "        process.exit(1);",
+      "    }",
+      "})()"
+    ]
+  }
+
+}
