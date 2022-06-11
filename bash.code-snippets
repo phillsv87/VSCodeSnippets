@@ -5,6 +5,7 @@
     "description": "Bash shebang and change directory to script directory",
     "body": [
       "#!/bin/bash",
+      "set -e",
       "cd \"\\$(dirname \"\\$0\")\"",
       ""
     ]
