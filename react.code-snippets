@@ -18,7 +18,7 @@
       "",
       "    return (",
       "        <div>",
-      "            Component \"HI\"",
+      "            ${1:${TM_FILENAME_BASE}}",
       "        </div>",
       "    )",
       "",
