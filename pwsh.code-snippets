@@ -1,8 +1,8 @@
 {
-  "Powershell Header": {
+  "Powershell Shebang": {
     "scope": "powershell",
-    "prefix": "ps-header",
-    "description": "Standard powershell header",
+    "prefix": "ps-shebang",
+    "description": "Standard powershell shebang",
     "body": [
       "#!/usr/bin/env pwsh",
       "$$ErrorActionPreference=\"Stop\""
