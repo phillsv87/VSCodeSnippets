@@ -9,5 +9,18 @@
       "cd \"\\$(dirname \"\\$0\")\"",
       ""
     ]
+  },
+
+
+  "Node in bash": {
+    "scope": "shellscript",
+    "prefix": "exec-node",
+    "description": "Executes not in bash",
+    "body": [
+      "node --harmony << EOF",
+      "${1:// node stuff here}",
+      "EOF"
+    ]
   }
+
 }
