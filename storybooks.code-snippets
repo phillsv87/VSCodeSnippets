@@ -1,0 +1,21 @@
+{
+  "StoryBookStory": {
+    "scope": "typescriptreact",
+    "prefix": "make-story",
+    "description": "Creates a storybook story",
+    "body": [
+      "import ${1:${TM_FILENAME_BASE}} from './${1:${TM_FILENAME_BASE}}';",
+      "import { createStory } from './story-lib';",
+      "",
+      "export default {",
+      "    component:${1:${TM_FILENAME_BASE}},",
+      "    title:'${1:${TM_FILENAME_BASE}}'",
+      "}",
+      "",
+      "export const Default = createStory(${1:${TM_FILENAME_BASE}},{",
+      "    prop:'value'",
+      "})",
+      ""
+    ]
+  }
+}
