@@ -66,6 +66,109 @@
       "private readonly _on${1:name}=createEventT<(${2:listenerArgs})=>void>();",
       "public get on${1:name}(){return this._on${1:name}.evt}"
     ]
+  },
+
+
+  "Disposable class": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "make-disposable-class",
+    "description": "Defines a disposable class",
+    "body": [
+      "${2:export }class ${1:${TM_FILENAME_BASE}} implements IDisposable",
+      "{",
+      "",
+      "    private _isDisposed=false;",
+      "    public get isDisposed(){return this._isDisposed}",
+      "",
+      "",
+      "",
+      "    public dispose()",
+      "    {",
+      "        if(this._isDisposed){",
+      "            return;",
+      "        }",
+      "        this._isDisposed=true;",
+      "    }",
+      "}"
+    ]
+  },
+
+
+  "Disposable members": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "disposable-members",
+    "description": "Adds disposable members",
+    "body": [
+      "private _isDisposed=false;",
+      "public get isDisposed(){return this._isDisposed}",
+      "public dispose()",
+      "{",
+      "    if(this._isDisposed){",
+      "        return;",
+      "    }",
+      "    this._isDisposed=true;",
+      "}"
+    ]
+  },
+
+
+  "make-disposable-class-with-container": {
+    "scope": "typescript",
+    "prefix": "make-disposable-class-with-container",
+    "description": "Defines a disposable class",
+    "body": [
+      "${2:export }class ${1:${TM_FILENAME_BASE}} implements IDisposable",
+      "{",
+      "",
+      "    private _isDisposed=false;",
+      "    public get isDisposed(){return this._isDisposed}",
+      "    protected readonly disposables:DisposeContainer=new DisposeContainer();",
+      "",
+      "",
+      "",
+      "    public dispose()",
+      "    {",
+      "        if(this._isDisposed){",
+      "            return;",
+      "        }",
+      "        this._isDisposed=true;",
+      "        this.disposables.dispose();",
+      "    }",
+      "}"
+    ]
+  },
+
+
+  "prop-readonly-subject": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "prop-readonly-subject",
+    "description": "Creates a readonly property backed by a BehaviorSubject",
+    "body": [
+      "private readonly _${1:name}:BehaviorSubject<${2:type}>${4:=new BehaviorSubject<${2:type}>(${3:default})};",
+      "public get ${1:name}Subject():ReadonlySubject<${2:type}>{return this._${1:name}}",
+      "public get ${1:name}(){return this._${1:name}.value}"
+    ]
+  },
+
+
+  "prop-subject": {
+    "scope": "typescript",
+    "prefix": "prop-subject",
+    "description": "Creates a property backed by a BehaviorSubject",
+    "body": [
+      "private readonly _${1:name}:BehaviorSubject<${2:type}>${4:=new BehaviorSubject<${2:type}>(${3:default})};",
+      "public get ${1:name}Subject():ReadonlySubject<${2:type}>{return this._${1:name}}",
+      "public get ${1:name}(){return this._${1:name}.value}",
+      "public set ${1:name}(value:${2:type}){",
+      "    if(value==this._${1:name}.value){",
+      "        return;",
+      "    }",
+      "    this._${1:name}.next(value);",
+      "}"
+    ]
   }
+
+
+
 
 }

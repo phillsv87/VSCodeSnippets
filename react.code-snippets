@@ -5,8 +5,6 @@
     "scope": "typescriptreact",
     "description": "React JS functional component",
     "body": [
-      "import React from 'react';",
-      "",
       "interface ${2:${TM_FILENAME_BASE}}Props",
       "{",
       "    ",
