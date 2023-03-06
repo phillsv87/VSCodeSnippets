@@ -1,0 +1,18 @@
+{
+
+  "FileName": {
+    "prefix": "ffv",
+    "description": "Inserts the current filename",
+    "body": ["${TM_FILENAME_BASE}"]
+  },
+  
+  "DotFileName": {
+    "prefix": "ffd",
+    "description": "Inserts the current filename with a dot prefixed",
+    "body": [".${TM_FILENAME_BASE}"]
+  }
+
+
+
+
+}

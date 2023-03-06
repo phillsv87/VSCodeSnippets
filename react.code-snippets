@@ -124,7 +124,44 @@
       "",
       "}"
     ]
+  },
+
+
+  "BaseLayout React Component": {
+    "scope": "typescriptreact",
+    "prefix": "re-base-layout-comp",
+    "description": "A react component that follows the BaseLayout component convention",
+    "body": [
+      "import { BaseLayoutOuterProps, bcn } from \"@iyio/common\";",
+      "",
+      "interface ${2:${TM_FILENAME_BASE}}Props extends BaseLayoutOuterProps",
+      "{",
+      "",
+      "}",
+      "",
+      "export ${1:default }function ${2:${TM_FILENAME_BASE}}({",
+      "    ...props",
+      "}:${2:${TM_FILENAME_BASE}}Props){",
+      "",
+      "    return (",
+      "        <div className={bcn(props,\"${2:${TM_FILENAME_BASE}}\")}>",
+      "",
+      "            ${2:${TM_FILENAME_BASE}}",
+      "",
+      "            <style jsx>{`",
+      "                .${2:${TM_FILENAME_BASE}}{",
+      "                    display:flex;",
+      "                    flex-direction:column;",
+      "                    flex:1;",
+      "                }",
+      "            `}</style>",
+      "        </div>",
+      "    )",
+      "",
+      "}"
+    ]
   }
+
 
 
 
