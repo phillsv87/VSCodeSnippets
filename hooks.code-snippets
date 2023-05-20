@@ -25,9 +25,107 @@
     "prefix": "use-callback",
     "description": "useCallback hook",
     "body": [
-      "const ${1}=useCallback(()=>{",
-      "    ${3:// call me}",
+      "const ${1}=useCallback((${2})=>{",
+      "    ",
+      "    ${4:// call me}",
+      "    ",
+      "},[${3}]);"
+    ]
+  },
+
+
+  "useEffect hook": {
+    "scope": "typescriptreact,javascriptreact,javascript,typescript",
+    "prefix": "use-effect",
+    "description": "useEffect hook",
+    "body": [
+      "useEffect(()=>{",
+      "    ",
+      "    ${2:// do it}",
+      "    ",
+      "},[${1}]);"
+    ]
+  },
+  
+  "React mounted Effect": {
+    "scope": "typescriptreact,typescript",
+    "prefix": "use-effect-m",
+    "description": "Async useEffect",
+    "body": [
+      "useEffect(()=>{",
+      "    let m=true;",
+      "    ",
+      "    ${2:// do it}",
+      "    ",
+      "    return ()=>{m=false};",
+      "},[${1}]);"
+    ]
+  },
+  
+  "React Async Effect": {
+    "scope": "typescriptreact,typescript",
+    "prefix": "use-effect-async",
+    "description": "Async useEffect",
+    "body": [
+      "useEffect(()=>{",
+      "    let m=true;",
+      "    (async ()=>{",
+      "        try{",
+      "            ${3:// do it}",
+      "        }catch(ex){",
+      "            console.error('${1:errorMessage}',ex);",
+      "        }",
+      "    })()",
+      "    return ()=>{m=false};",
       "},[${2}]);"
+    ]
+  },
+
+
+  "useMemo hook": {
+    "scope": "typescriptreact,javascriptreact,javascript,typescript",
+    "prefix": "use-memo",
+    "description": "useMemo hook",
+    "body": [
+      "const ${1}=useMemo(()=>${3},[${2}]);"
+    ]
+  },
+
+
+  "useMemo<T> hook": {
+    "scope": "typescriptreact,javascriptreact,javascript,typescript",
+    "prefix": "use-t-memo",
+    "description": "useMemo T hook",
+    "body": [
+      "const ${1}=useMemo<${2}>(()=>${4},[${3}]);"
+    ]
+  },
+
+
+  "useMemo multiline hook": {
+    "scope": "typescriptreact,javascriptreact,javascript,typescript",
+    "prefix": "use-memo-ml",
+    "description": "useMemo hook",
+    "body": [
+      "const ${1}=useMemo(()=>{",
+      "    ",
+      "    return ${3};",
+      "    ",
+      "},[${2}]);",
+    ]
+  },
+
+
+  "useMemo T multiline hook": {
+    "scope": "typescriptreact,javascriptreact,javascript,typescript",
+    "prefix": "use-t-memo-ml",
+    "description": "useMemo hook",
+    "body": [
+      "const ${1}=useMemo<${2}>(()=>{",
+      "    ",
+      "    return ${4};",
+      "    ",
+      "},[${3}]);",
     ]
   }
 
