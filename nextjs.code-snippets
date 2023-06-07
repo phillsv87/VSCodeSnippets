@@ -62,6 +62,16 @@
       "    }",
       "}"
     ]
+  },
+
+
+  "NextDynamicImport": {
+    "prefix": "next-dynamic-import",
+    "scope": "typescriptreact",
+    "description": "Import a dynamic component",
+    "body": [
+      "const ${1:Comp}=dynamic(()=>import('../components/${1:Comp}'),{ssr:false});"
+    ]
   }
 
 }

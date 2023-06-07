@@ -26,9 +26,7 @@
     "description": "useCallback hook",
     "body": [
       "const ${1}=useCallback((${2})=>{",
-      "    ",
       "    ${4:// call me}",
-      "    ",
       "},[${3}]);"
     ]
   },
@@ -40,9 +38,7 @@
     "description": "useEffect hook",
     "body": [
       "useEffect(()=>{",
-      "    ",
       "    ${2:// do it}",
-      "    ",
       "},[${1}]);"
     ]
   },
