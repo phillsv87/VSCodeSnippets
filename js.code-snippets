@@ -1,10 +1,18 @@
 {
   "logObject": {
     "scope": "typescript,typescriptreact,javascript,javascriptreact",
+    "prefix": "hioo",
+    "description": "Log value",
+    "body": [
+      "console.log('hio 👋 👋 👋${2}',{${1}});${3}"
+    ]
+  },
+  "logValues": {
+    "scope": "typescript,typescriptreact,javascript,javascriptreact",
     "prefix": "hio",
     "description": "Log object",
     "body": [
-      "console.log('hio 👋 👋 👋${2}',{${1}});"
+      "console.log('hio 👋 👋 👋${2}',${1});${3}"
     ]
   }
 }
