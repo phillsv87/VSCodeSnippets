@@ -112,6 +112,26 @@
   },
 
 
+  "Disposable members with container": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "disposable-members-container",
+    "description": "Adds disposable members",
+    "body": [
+      "private readonly disposables=new DisposeContainer();",
+      "private _isDisposed=false;",
+      "public get isDisposed(){return this._isDisposed}",
+      "public dispose()",
+      "{",
+      "    if(this._isDisposed){",
+      "        return;",
+      "    }",
+      "    this._isDisposed=true;",
+      "    this.disposables.dispose();",
+      "}"
+    ]
+  },
+
+
   "make-disposable-class-with-container": {
     "scope": "typescript",
     "prefix": "make-disposable-class-with-container",
@@ -166,7 +186,19 @@
       "    this._${1:name}.next(value);",
       "}"
     ]
+  },
+
+
+  "event-subject": {
+    "scope": "typescript",
+    "prefix": "event-subject",
+    "description": "Creates a event using a rxjs Subject",
+    "body": [
+      "private readonly _${1:onEvent}=new Subject<${2:type}>();",
+      "public get ${1:onEvent}():Observable<${2:type}>{return this._${1:onEvent}}"
+    ]
   }
+
 
 
 
