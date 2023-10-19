@@ -123,6 +123,17 @@
       "    ",
       "},[${3}]);",
     ]
+  },
+
+   
+  "Refs": {
+    "scope": "typescriptreact,javascriptreact,javascript,typescript",
+    "prefix": "use-refs",
+    "description": "Sets up refs",
+    "body": [
+      "const refs=useRef({${1:first}});",
+      "refs.current.${1:first}=${1:first};"
+    ]
   }
 
 

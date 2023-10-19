@@ -73,9 +73,9 @@
   },
 
 
-  "Styled React Component": {
+  "StyledJsx React Component": {
     "scope": "typescriptreact",
-    "prefix": "re-comp-styled",
+    "prefix": "jsx-re-comp-styled",
     "description": "A react component that uses styled-jsx",
     "body": [
       "export interface ${1:${TM_FILENAME_BASE}}Props",
@@ -137,6 +137,42 @@
       "    )",
       "",
       "}"
+    ]
+  },
+
+
+  "Styled React Component": {
+    "scope": "typescriptreact",
+    "prefix": "re-comp-styled",
+    "description": "A react component that uses at-dot-css",
+    "body": [
+      "import { atDotCss } from \"@iyio/at-dot-css\"",
+      "",
+      "export interface ${1:${TM_FILENAME_BASE}}Props",
+      "{",
+      "    ",
+      "}",
+      "",
+      "export function ${1:${TM_FILENAME_BASE}}({",
+      "",
+      "}:${1:${TM_FILENAME_BASE}}Props){",
+      "",
+      "    return (",
+      "        <div className={style.root()}>",
+      "",
+      "            ${1:${TM_FILENAME_BASE}}",
+      "",
+      "        </div>",
+      "    )",
+      "",
+      "}",
+      "",
+      "const style=atDotCss({name:'${1:${TM_FILENAME_BASE}}',css:`",
+      "    @.root{",
+      "        display:flex;",
+      "        flex-direction:column;",
+      "    }",
+      "`});"
     ]
   }
 

@@ -1,0 +1,19 @@
+{
+
+  "at-dot-style": {
+    "scope": "typescriptreact,javascriptreact,javascript,typescript",
+    "prefix": "at-dot-style",
+    "description": "Creates an at-dot-css style",
+    "body": [
+      "const style=atDotCss({name:'${1:${TM_FILENAME_BASE}}',css:`",
+      "    @.root{",
+      "        display:flex;",
+      "        flex-direction:column;${2}",
+      "    }",
+      "",
+      "`});"
+    ]
+  }
+
+
+}
