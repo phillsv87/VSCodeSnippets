@@ -66,6 +66,17 @@
       "private readonly _on${1:name}=createEventT<(${2:listenerArgs})=>void>();",
       "public get on${1:name}(){return this._on${1:name}.evt}"
     ]
-  }
+  },
 
+
+  "TS Named Custom Event 2": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "ts-custom-event-2",
+    "description": "TypeScript named custom event",
+    "body": [
+      "private readonly _on${1:name}=createEventT<(${2:listenerArgs})=>void>();",
+      "public get on${1:name}(){return this._on${1:name}.evt}"
+    ]
+  }
+  
 }

@@ -1,0 +1,59 @@
+{
+  "Scoped Service Provider": {
+    "scope": "typescript",
+    "prefix": "make-scoped-service",
+    "description": "Creates a scopable service provider or service",
+    "body": [
+      "import { Scope, TypeDef } from '@iyio/common';",
+      "",
+      "",
+      "export interface ${1:${TM_FILENAME_BASE}}Options",
+      "{",
+      "    provider:TypeDef<any>",
+      "    valueParam:string",
+      "}",
+      "",
+      "export class ${1:${TM_FILENAME_BASE}}",
+      "{",
+      "",
+      "    public static optionsFromScope(scope:Scope):${1:${TM_FILENAME_BASE}}Options{",
+      "        return {",
+      "            provider:scope.to(ISomeType),",
+      "            valueParam:scope.require(someParam),",
+      "        }",
+      "    }",
+      "",
+      "    public static fromScope(scope:Scope){",
+      "        return new ${1:${TM_FILENAME_BASE}}(${1:${TM_FILENAME_BASE}}.optionsFromScope(scope));",
+      "    }",
+      "",
+      "    private readonly options:${1:${TM_FILENAME_BASE}}Options;",
+      "",
+      "    public constructor(options:${1:${TM_FILENAME_BASE}}Options)",
+      "    {",
+      "        this.options={...options}",
+      "    }",
+      "",
+      "}",
+      ""
+    ]
+  },
+
+
+  "make-scope-module": {
+    "scope": "typescript",
+    "prefix": "make-scope-module",
+    "description": "Creates a scope modules used to register scope dependencies",
+    "body": [
+      "import { ScopeRegistration } from \"@iyio/common\";",
+      "",
+      "export const ${1:name}Module=(sr:ScopeRegistration)=>{",
+      "    ",
+      "}",
+      ""
+    ]
+  }
+
+
+
+}
