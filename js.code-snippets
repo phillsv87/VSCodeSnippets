@@ -14,5 +14,18 @@
     "body": [
       "console.log('hio 👋 👋 👋${2}',${1});${3}"
     ]
+  },
+
+
+  "for n": {
+    "scope": "typescript,typescriptreact,javascript,javascriptreact",
+    "prefix": "forn",
+    "description": "A basic for loop without iterators",
+    "body": [
+      "for(let ${1:i}=0;${1:i}<${2:count};${1:i}++){",
+      "    $0",
+      "}"
+    ]
   }
+
 }

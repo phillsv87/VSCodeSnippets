@@ -174,9 +174,41 @@
       "    }",
       "`});"
     ]
+  },
+
+
+  "Lazy Import": {
+    "scope": "typescriptreact,typescript",
+    "prefix": "lazy-comp-import",
+    "description": "Lazy component import",
+    "body": [
+      "const ${1}=lazy(()=>import('./${1}').then(v=>({default:v.${1}})));"
+    ]
+  },
+
+
+  "Lazy Component": {
+    "scope": "typescriptreact,typescript",
+    "prefix": "lazy-comp",
+    "description": "Defines a lazy component",
+    "body": [
+      "import { FirstArg } from '@iyio/common';",
+      "import { Suspense, lazy } from 'react';",
+      "",
+      "const ${1}=lazy(()=>import('./${1}').then(v=>({default:v.${1}})));",
+      "",
+      "export function Lazy${1}({",
+      "    lazyFallback,",
+      "    ...props",
+      "}:FirstArg<typeof ${1}> & {lazyFallback?:any}){",
+      "    return (",
+      "        <Suspense fallback={lazyFallback}>",
+      "            <${1} {...props}/>",
+      "        </Suspense>",
+      "    )",
+      "}"
+    ]
   }
-
-
 
 
 }
