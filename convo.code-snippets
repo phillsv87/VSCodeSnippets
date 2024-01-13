@@ -1,0 +1,14 @@
+{
+  "convo string": {
+    "scope": "typescript,typescriptreact,javascript,javascriptreact",
+    "prefix": "convo-string",
+    "description": "Opens a convo template string",
+    "body": [
+      "/*convo*/`"
+      "    $0"
+      "`"
+    ]
+  }
+
+
+}
